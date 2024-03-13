@@ -1,0 +1,18 @@
+{
+  "name": "ZhihuQuestionFilter",
+  "description": "创作中心隐藏0关注问题",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://www.zhihu.com/creator/featured-question/*"
+      ]
+    }
+  ]
+}
