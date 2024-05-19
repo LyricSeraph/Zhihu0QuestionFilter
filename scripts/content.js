@@ -32,10 +32,11 @@ const questionObserver = function(m){
         const content = nd.innerText;
         if (content.includes("· 0 关注")) {
             nd.style.display = 'none'
-            //if (nd.parentNode) {
-            //    nd.parentNode.removeChild(nd);
-            //}
             console.log("Hide 0 follow question: " + nd.textContent);
+        }
+        if (nd.firstChild.firstChild.children.length === 3) {
+            nd.firstChild.firstChild.firstChild.style.display = 'none'
+            console.log("Hide text: " + nd.firstChild.firstChild.firstChild.textContent);
         }
     }
 }
