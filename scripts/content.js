@@ -34,9 +34,13 @@ const questionObserver = function(m){
             nd.style.display = 'none'
             console.log("Hide 0 follow question: " + nd.textContent);
         }
-        if (nd.firstChild.firstChild.children.length === 3) {
+        var nodeLength = nd.firstChild.firstChild.children.length
+        if (nodeLength === 3) {
             nd.firstChild.firstChild.firstChild.style.display = 'none'
+            nd.firstChild.firstChild.children[1].style.whiteSpace = 'nowrap'
             console.log("Hide text: " + nd.firstChild.firstChild.firstChild.textContent);
+        } else if (nodeLength === 2) {
+            nd.firstChild.firstChild.children[0].style.whiteSpace = 'nowrap'
         }
     }
 }
